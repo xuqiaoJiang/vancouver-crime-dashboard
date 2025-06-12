@@ -24,8 +24,8 @@ if 'WEEKDAY' not in df.columns:
 years = sorted(df['YEAR'].dropna().unique())
 types = sorted(df['TYPE'].dropna().unique())
 
-selected_years = st.sidebar.multiselect("Select Year(s)", years, default=[2016])
-selected_types = st.sidebar.multiselect("Select Crime Type(s)", types, default=types[:3])
+selected_years = st.sidebar.multiselect("Select Year(s)", years)
+selected_types = st.sidebar.multiselect("Select Crime Type(s)", types)
 
 # Header
 st.title("Vancouver Crime Pattern Analysis (2003-2016)")
