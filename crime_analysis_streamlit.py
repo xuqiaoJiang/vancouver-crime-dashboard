@@ -37,7 +37,7 @@ st.write(df.head())
 st.markdown("---")
 
 # Section 2: Crime Type by Year Heatmap
-st.header("4. Crime Type Yearly Distribution")
+st.header("2. Crime Type Yearly Distribution")
 
 # 构建透视表
 pivot_table = df.pivot_table(index='TYPE', columns='YEAR', values='HOUR', aggfunc='count').fillna(0)
@@ -90,7 +90,7 @@ st.pyplot(fig)
 st.markdown("---")
 
 # Section 4: Crime Heatmap using Folium
-st.header("2. Crime Density Heatmap (Folium)")
+st.header("4. Crime Density Heatmap (Folium)")
 if selected_types:
     filtered_df = filtered_df[filtered_df['TYPE'].isin(selected_types)]
 
